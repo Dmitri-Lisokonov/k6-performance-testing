@@ -1,21 +1,35 @@
 version: '2'
+
+networks:
+  k6:
+  grafana:
+
 services:
   grafana:
     image: grafana/grafana:latest
+    networks:
+      - grafana
     ports:
-      - 3000:3000
+      - "3000:3000"
     environment:
       GF_RENDERING_SERVER_URL: http://renderer:8081/render
       GF_RENDERING_CALLBACK_URL: http://grafana:3000/
       GF_LOG_FILTERS: rendering:debug
+
+    volumes:
+      - ./grafana:/etc/grafana/provisioning/
+
   renderer:
     image: grafana/grafana-image-renderer:latest
     ports:
       - 8081
+
   influxdb:
-    image: influxdb:latest
-    volumes:
-      # Mount for influxdb data directory and configuration
-      - /Users/anaisdotis-georgiou/temp/influxdb2:/var/lib/influxdb2:rw
-    ports:
-      - "8086:8086"
+      image: influxdb:1.8
+      networks:
+        - k6
+        - grafana
+      ports:
+        - "8086:8086"
+      environment:
+        - INFLUXDB_DB=k6
