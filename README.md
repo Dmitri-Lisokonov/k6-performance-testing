@@ -7,7 +7,7 @@ docker-compose up
 ```
 ## Run script
 ```
-bat.run https://influxdb:8086/test 2 10 10 5
+run.bat https://influxdb:8086/test 2 10 10 5
 ```
 ## run.bat parameters and configuration
 Parameters are specified respectively.
