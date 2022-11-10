@@ -4,6 +4,7 @@ Use docker-compose up to setup the environment.
 ## Setup
 > docker-compose up
 ## run.bat config
+| Left-Aligned  | Left-Aligned  |
 | Parameter | Description    |
 | :---:   | :---: |
 | ScriptName | Name of k6 script to run  |
