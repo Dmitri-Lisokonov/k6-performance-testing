@@ -4,9 +4,8 @@ Use docker-compose up to setup the environment.
 ## Setup
 > docker-compose up
 ## run.bat config
-| Left-Aligned  | Left-Aligned  |
 | Parameter | Description    |
-| :---:   | :---: |
+|:--    | :--   |
 | ScriptName | Name of k6 script to run  |
 | DatabaseUrl | Url to influxDB i.e. https://influxdb:8086/someDbName |
 | Iterations |Number of iterations to run k6 script |
