@@ -2,7 +2,9 @@
 K6 performance testing using Grafana and InfluxDB.
 Use docker-compose up to setup the environment.	
 ## Setup
-> docker-compose up
+```
+docker-compose up
+```
 ## run.bat config
 | Parameter | Description    |
 |:--    | :--   |
