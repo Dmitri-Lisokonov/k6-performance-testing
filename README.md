@@ -34,7 +34,7 @@ Create your own k6 script file and run it using:
 k6 run -o influxdb=https://influxdb:8086/yourDbName yourScriptName.js
 ```
 
-## run.bat parameters and configuration
+## Parameters and configuration
 Parameters are specified respectively when using ```run.bat``` file
 | Parameter | Description    |
 |:--    | :--   |
