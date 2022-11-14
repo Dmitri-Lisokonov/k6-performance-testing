@@ -27,6 +27,13 @@ After going through these steps, the setup is complete and you can create dashbo
 ```
 run.bat https://influxdb:8086/test 2 10 10 5
 ```
+OR
+
+Create your own k6 scrips file and run it using:
+```
+k6 run -o influxdb=https://influxdb:8086/yourDbName yourScriptName.js
+```
+
 ## run.bat parameters and configuration
 Parameters are specified respectively.
 | Parameter | Description    |
