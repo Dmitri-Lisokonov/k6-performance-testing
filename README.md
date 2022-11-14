@@ -42,4 +42,4 @@ Parameters are specified respectively when using ```run.bat``` file
 | Iterations |Number of iterations to run k6 script |
 | Rate | Request rate per specified time unit  |
 | IncrementRate | Increment of rate per script run  |
-| Sleep | Sleep between script iterations  |
+| Sleep | Sleep between batch script iterations  |
