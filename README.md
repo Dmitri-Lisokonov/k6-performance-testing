@@ -11,10 +11,12 @@ Add the InfluxDb database as a datasource in Grafana
 ![image](https://user-images.githubusercontent.com/44115633/201715414-c8093896-18eb-4356-943e-1e87685a818a.png)
 
 Configure datasource to connect to InfluxDb
+
 ![image](https://user-images.githubusercontent.com/44115633/201715647-56cb1bcb-5de6-4d52-9021-2baee863c6aa.png)
 
 Fill in your database name
-![image](https://user-images.githubusercontent.com/44115633/201715900-a8710b3f-1222-429f-bc0c-752af6a4a876.png)
+
+![image](https://user-images.githubusercontent.com/44115633/201716298-330d1b5b-15de-469e-975c-3f36dd85c0a1.png)
 
 Note: If you don't want to create the database manually you can just run ```run.bat``` it will auto generate a database with specified databaseUrl param
 
