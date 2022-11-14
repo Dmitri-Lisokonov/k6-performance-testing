@@ -35,7 +35,7 @@ k6 run -o influxdb=https://influxdb:8086/yourDbName yourScriptName.js
 ```
 
 ## run.bat parameters and configuration
-Parameters are specified respectively when using run.bat file
+Parameters are specified respectively when using ```run.bat``` file
 | Parameter | Description    |
 |:--    | :--   |
 | DatabaseUrl | Url to influxDB i.e. https://influxdb:8086/someDbName |
