@@ -29,7 +29,7 @@ run.bat https://influxdb:8086/test 2 10 10 5
 ```
 OR
 
-Create your own k6 scrips file and run it using:
+Create your own k6 script file and run it using:
 ```
 k6 run -o influxdb=https://influxdb:8086/yourDbName yourScriptName.js
 ```
