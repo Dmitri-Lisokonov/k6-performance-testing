@@ -20,7 +20,7 @@ Fill in your database name
 
 _Note: The database has to exists in InfluxDb in order to connect to it. If you don't want to create the database manually you can just run ```run.bat``` or any K6 script with the ```-o influxdb=http://influxdb:8086/yourDbName``` flag since it will auto generate a database with specified databaseUrl param_
 
-After going through these steps, the setup is complete and you can create dashboard using InfluxDb data
+After going through these steps, the setup is complete and you can create a dashboard using InfluxDb data
 ```http://localhost:3000/dashboards```
 
 ## Run script
