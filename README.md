@@ -18,7 +18,7 @@ Fill in your database name
 
 ![image](https://user-images.githubusercontent.com/44115633/201716298-330d1b5b-15de-469e-975c-3f36dd85c0a1.png)
 
-Note: If you don't want to create the database manually you can just run ```run.bat``` it will auto generate a database with specified databaseUrl param
+Note: The database has to exists in InfluxDb in order to connect to it. If you don't want to create the database manually you can just run ```run.bat``` it will auto generate a database with specified databaseUrl param
 
 ## Run script
 ```
