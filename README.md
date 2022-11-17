@@ -6,7 +6,7 @@ Use docker-compose up to setup the environment.
 docker-compose up
 ```
 Add the InfluxDb database as a datasource in Grafana 
-```https://localhost:3000/datasources```
+```http://localhost:3000/datasources```
 
 ![image](https://user-images.githubusercontent.com/44115633/201715414-c8093896-18eb-4356-943e-1e87685a818a.png)
 
@@ -25,13 +25,13 @@ After going through these steps, the setup is complete and you can create a dash
 
 ## Run script
 ```
-run.bat https://influxdb:8086/test 2 10 10 5
+run.bat http://localhost:8086/test 2 10 10 5
 ```
 OR
 
 Create your own k6 script file and run it using:
 ```
-k6 run -o influxdb=http://influxdb:8086/yourDbName yourScriptName.js
+k6 run -o influxdb=http://localhost:8086/yourDbName yourScriptName.js
 ```
 
 ## Parameters and configuration
