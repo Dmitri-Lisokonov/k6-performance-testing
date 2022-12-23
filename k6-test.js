@@ -24,7 +24,7 @@ const reportOptions = {
 }
 
 export default function () {
-    const url = 'url';
+    const url = __ENV.TARGET;
     const params = {
         headers: {
             'Content-Type': 'application/json',

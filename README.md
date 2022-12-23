@@ -25,7 +25,7 @@ After going through these steps, the setup is complete and you can create a dash
 
 ## Run script
 ```
-k6 run -e VUS=50 -o influxdb=http://localhost:8086/yourDbName yourScriptName.js
+k6 run -e VUS=50 -e TARGET=https://example-api.com/api/someEndpoint -o influxdb=http://localhost:8086/yourDbName yourScriptName.js
 ```
 OR
 Create your own k6 script file and run it using:
