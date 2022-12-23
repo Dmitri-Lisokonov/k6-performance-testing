@@ -7,7 +7,7 @@ export const options = {
     scenarios: {
         constant_request_rate: {
             executor: 'constant-vus',
-            vus: __ENV.RATE,
+            vus: __ENV.VUS,
             duration: '30s', // Total duration of tests
           },
     },
