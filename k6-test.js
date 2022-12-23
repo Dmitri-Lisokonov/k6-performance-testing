@@ -6,12 +6,9 @@ export const options = {
     insecureSkipTLSVerify: true,
     scenarios: {
         constant_request_rate: {
-            executor: 'constant-arrival-rate',
-            rate: __ENV.RATE,
-            timeUnit: '1s', // iterations per second, i.e. Rate of 1000 = 1000RPS
+            executor: 'constant-vus',
+            vus: __ENV.RATE,
             duration: '30s', // Total duration of tests
-            preAllocatedVUs: 100, // how large the initial pool of VUs would be
-            maxVUs: 10000, // if the preAllocatedVUs are not enough, we can initialize more
           },
     },
 }
@@ -19,11 +16,11 @@ export const options = {
 const date = new Date().toLocaleString();
 
 // Name of generated report
-const fileName = `\summary-rate(${options.scenarios.constant_request_rate.rate})-duration(${options.scenarios.constant_request_rate.duration}).html`
+const fileName = `\summary-vus(${options.scenarios.constant_request_rate.vus})-duration(${options.scenarios.constant_request_rate.duration}).html`
 
 // Title of generated report
 const reportOptions = {
-    title: `Rate: ${options.scenarios.constant_request_rate.rate} per ${options.scenarios.constant_request_rate.timeUnit} | Duration: ${options.scenarios.constant_request_rate.duration} | Start: ${date}` 
+    title: `Rate: ${options.scenarios.constant_request_rate.vus} | Duration: ${options.scenarios.constant_request_rate.duration} | Start: ${date}` 
 }
 
 export default function () {
@@ -33,9 +30,8 @@ export default function () {
             'Content-Type': 'application/json',
         }
     }
-    const res = http.get(url, params);
+    const res = http.post(url, params);
 
-    // Add checks here
     check(res, {
         'is status 200': (r) => r.status === 200,
     });

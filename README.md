@@ -18,28 +18,22 @@ Fill in your database name
 
 ![image](https://user-images.githubusercontent.com/44115633/201716298-330d1b5b-15de-469e-975c-3f36dd85c0a1.png)
 
-_Note: The database has to exists in InfluxDb in order to connect to it. If you don't want to create the database manually you can just run ```run.bat``` or any K6 script with the ```-o influxdb=http://influxdb:8086/yourDbName``` flag since it will auto generate a database with specified databaseUrl param_
+_Note: The database has to exists in InfluxDb in order to connect to it. If you don't want to create the database manually you can just run a K6 script with the ```-o influxdb=http://influxdb:8086/yourDbName``` flag since it will auto generate a database with specified databaseUrl param_
 
 After going through these steps, the setup is complete and you can create a dashboard using InfluxDb data
 ```http://localhost:3000/dashboards```
 
 ## Run script
 ```
-run.bat http://localhost:8086/test 2 10 10 5
+k6 run -e VUS=50 -o influxdb=http://localhost:8086/yourDbName yourScriptName.js
 ```
 OR
-
 Create your own k6 script file and run it using:
 ```
 k6 run -o influxdb=http://localhost:8086/yourDbName yourScriptName.js
 ```
 
-## Parameters and configuration
-Parameters are specified respectively when using ```run.bat``` file
-| Parameter | Description    |
-|:--    | :--   |
-| DatabaseUrl | Url to influxDB i.e. http://influxdb:8086/someDbName |
-| Iterations |Number of iterations to run k6 script |
-| Rate | Request rate per specified time unit  |
-| IncrementRate | Increment of rate per script run  |
-| Sleep | Sleep between batch script iterations  |
+
+
+
+
